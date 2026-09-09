@@ -1,6 +1,9 @@
 <?php
 
-require_once "Cajero.php";
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+use App\Cajero;
+use App\herencia\CuentaAhorros;
 
 // Crear una cuenta de ahorros
 $cuenta = new CuentaAhorros(

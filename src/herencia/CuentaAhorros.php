@@ -1,6 +1,6 @@
 <?php
-
-require_once "Cuenta.php";
+namespace App\herencia;
+use App\herencia\Cuenta;
 
 class CuentaAhorros extends Cuenta
 {

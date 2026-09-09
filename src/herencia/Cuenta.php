@@ -1,6 +1,8 @@
 <?php
 
-require_once __DIR__ . "/../interface/OperacionBancaria.php";
+namespace App\herencia;
+
+use App\interface\OperacionBancaria;
 
 class Cuenta implements OperacionBancaria
 {
@@ -52,7 +54,7 @@ class Cuenta implements OperacionBancaria
     {
         if ($monto > 0) {
 
-            $this->saldo = $this->saldo + $monto;
+            $this->saldo += $monto;
 
             echo "Depósito realizado correctamente." . PHP_EOL;
             echo "Nuevo saldo: S/ " . $this->saldo . PHP_EOL;
@@ -76,12 +78,10 @@ class Cuenta implements OperacionBancaria
 
         } else {
 
-            $this->saldo = $this->saldo - $monto;
+            $this->saldo -= $monto;
 
             echo "Retiro realizado correctamente." . PHP_EOL;
             echo "Nuevo saldo: S/ " . $this->saldo . PHP_EOL;
         }
     }
 }
-
-?>

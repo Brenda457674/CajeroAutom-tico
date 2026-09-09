@@ -1,5 +1,7 @@
 <?php
 
+namespace App\interface;
+
 interface OperacionBancaria
 {
     public function consultarSaldo();
@@ -8,5 +10,3 @@ interface OperacionBancaria
 
     public function retirar($monto);
 }
-
-?>
